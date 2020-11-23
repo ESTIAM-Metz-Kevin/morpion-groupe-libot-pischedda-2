@@ -14,72 +14,36 @@
                 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
                     <a class="navbar-brand" href="#">Morpion</a>
                 </nav>
-            </header>
-            
+            </header>   
+            <img width="250" style='margin-left : -210px; margin-top: 30px' src="./images/goku.png"> 
+            <span style='margin-left : -185px; margin-top : 520px; position: absolute; font-size: 20pt;' class="j1"><b>J1: Goku</b></span>
+            <div style="margin-top: 42px; font-size: 15pt; margin-left: -170px;" class='j1'>
+                <b> Nombre de coups : <span id="nbCroix"></span></b>
+            </div>
+            <img width="247" style="margin-top: -650px; margin-left : 600px" src="./images/saitama.png">
+            <span style='margin-left : -200px; margin-top : -70px; position: absolute; font-size: 20pt;' class="j2"><b>J2: Saitama</b></span>
+            <div style="margin-top: -54px; font-size: 15pt; margin-left: 630px;" class='j2'>
+                <b> Nombre de coups : <span id="nbCercle"></span></b>
+            </div>
+
             <main class="mt-5">
-                <div class="container">
+                <div class="col" style="margin-top: -80px; position: absolute; margin-left: 225px;">
+                    <button id="refresh" onclick="document.location.reload(false)" class="btn btn-primary">Lancer une partie</button>
+                </div>
+                <div class="container" style="margin-left: 170px; margin-top: -400px;">
                     <div class="row">
-                        <div class="col-sm-4">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img width="100" src="./images/goku.png">
-                                </div>
-        
-                                <div class="col-sm-6">
-                                    <img width="150" src="./images/saitama.png">
-                                </div>
-                            </div>
-        
-                            <div class="row">
-                                <div class="col-sm-5">
-                                    <span class="j1">J1: Goku</span>
-                                </div>
-        
-                                <div class="col-sm-2">VS</div>
-
-                                <div class="col-sm-5">
-                                    <span class="j2">J2: Saitama</span>
-                                </div>
-                            </div>
+                        <canvas id="canvasMorpion" width="300" height="300"></canvas>
+                        <div class="col-sm-12 mt-2" style="margin-left: 20px">
+                            <span style="font-size: 20pt;" id="resultat"></span> 
                         </div>
-
-                        <div class="col-sm-4">
-                            <div id="board">
-                                <div class="cell"></div>
-                                <div class="cell"></div>
-                                <div class="cell"></div>
-                                <div class="cell"></div>
-                                <div class="cell"></div>
-                                <div class="cell"></div>
-                                <div class="cell"></div>
-                                <div class="cell"></div>
-                                <div class="cell"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4">
-
-                            <div class="row">
-                                <div class="col">
-                                    <button class="btn btn-primary">Lancer une partie</button>
-                                </div>
-                            </div>
+                        <div class="col-sm-4" style="margin-left: 50px;">
 
                             <div class="row mt-5">
-                                <div class="col-sm-12">
-                                    <span class="h3">Détails de la partie :</span>
-                                </div>
                                 <div class="col-sm-12 mb-2">
-                                    Au tour de [NOM JOUEUR] de Jouer
-                                </div>
-                                <div class="col-sm-12">
-                                    Nombre de X :
-                                </div>
-                                <div class="col-sm-12">
-                                    Nombre de O :
+                                    <h5 id="joueur">Au tour de Goku</h5>
                                 </div>
                                 <div class="col-sm-12 mt-2">
-                                    Vainqueur de la partie :
+                                    <span id="resultat"></span> 
                                 </div>
                             </div>
                         </div>
